@@ -1,0 +1,97 @@
+﻿<Project>
+    <!--
+    Welcome to an example .csproj file for a Fahrenheit module!
+
+    When in doubt, you can consult this to see what options need to be set and why.
+
+    Assume that the order in which these groups appear is intentional. When preparing your own project, use the same order.
+    -->
+
+    <!-- ASSEMBLY BASIC PROPERTIES -->
+    <!--
+    All projects should declare these properties.
+
+    TargetFramework MUST match that of every other project and the Fahrenheit version you are linking against.
+    PlatformTarget MUST be x86.
+    EnableDynamicLoading MUST be true.
+
+    The rest of the options are highly recommended, but strictly speaking not mandatory.
+    -->
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+        <RootNamespace>Fahrenheit.Mods.Fantasia</RootNamespace>
+    </PropertyGroup>
+
+    <!-- ASSEMBLY ADDITIONAL PROPERTIES -->
+    <!--
+    These properties are unique to your own mod!
+
+    Set what you want here, just keep it brief so it appears nice on the finished artifact.
+
+    AssemblyName is the name of the finished module DLL, ex. `fhtemplate.dll`.
+    AssemblyTitle and Product appear when hovering over the DLL in Windows Explorer.
+    -->
+    <PropertyGroup>
+        <AssemblyName>eve-fantasia</AssemblyName>
+        <AssemblyTitle>Fantasia</AssemblyTitle>
+        <Product>Fantasia</Product>
+    </PropertyGroup>
+
+    <!-- SDK REFERENCES -->
+    <!--
+    This should be included exactly as-is.
+    -->
+    <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+    <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+    <!-- SHARED FILE LINKS -->
+    <!--
+    This should be included exactly as-is.
+
+    This imports Fahrenheit's code style rules to allow you to write in a uniform way.
+    -->
+    <ItemGroup>
+        <None Include="$(SolutionDir).editorconfig" Link=".editorconfig" />
+    </ItemGroup>
+
+    <!-- MANIFEST & CONFIG REFERENCES -->
+    <!--
+    This should be included exactly as-is.
+    -->
+    <ItemGroup>
+        <Content Include="eve-fantasia.manifest.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Exclude="efl\**\*.*" Include="efl\**\*.*">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Exclude="lang\**\*.*" Include="lang\*.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Exclude="resources\**\*.*" Include="resources\**\*.*">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <!-- PROJECT REFERENCES -->
+    <!--
+    This should be included exactly as-is.
+
+    This imports Fahrenheit's core library, which you must link against.
+    You're free to import other libraries as well using NuGet packages, which will automatically add to this group.
+
+    Project references MUST have Private set to "false" and ExcludeAssets set to "runtime".
+    -->
+    <ItemGroup>
+        <ProjectReference Include="..\..\base\core\Fahrenheit.Core.csproj">
+            <Private>false</Private>
+            <ExcludeAssets>runtime;native</ExcludeAssets>
+        </ProjectReference>
+    </ItemGroup>
+
+</Project>

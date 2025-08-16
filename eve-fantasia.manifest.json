@@ -1,0 +1,10 @@
+{
+    "Name":"Fantasia",
+    "Desc":"Assorted changes and interesting modifications.",
+    "Authors": "EvelynTSMG",
+    "Version":"1.0-indev",
+    "Link":"https://github.com/EvelynTSMG/ffx-mods-fantasia",
+    "DllList":["eve-fantasia"],
+    "Dependencies":[],
+    "LoadAfter":[]
+}

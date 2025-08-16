@@ -1,0 +1,42 @@
+{
+  "fantasia.name": "Fantasia",
+  "fantasia.desc": "Assorted changes and interesting modifications.",
+
+
+  "fantasia.balance.name": "Balance",
+  "fantasia.balance.desc": "Changes to vanilla balance.",
+
+  "fantasia.vanilla_plus.name": "Vanilla+",
+  "fantasia.vanilla_plus.desc": "Minor changes that fit in with the vanilla game design.",
+
+  "fantasia.utility.name": "Utility",
+  "fantasia.utility.desc": "Useful tidbits that don't modify gameplay.",
+
+
+  "fantasia.minor_mechanics.name": "Minor Mechanics",
+  "fantasia.minor_mechanics.desc": "Minor additions to vanilla mechanics.",
+
+
+  "fantasia.mechanics.name": "Mechanics",
+  "fantasia.mechanics.desc": "New mechanics and impactful additions.",
+
+
+  "fantasia.experimental.name": "Experimental",
+  "fantasia.experimental.desc": "Bad ideas given form.",
+
+
+  "fantasia.balance.elemental_affinities.name": "Multi-Elemental Affinities Rebalanced",
+  "fantasia.balance.elemental_affinities.desc": "Changes to damage calculations of multi-elemental attacks",
+  "fantasia.balance.elemental_affinities.type.name": "Rebalance Type",
+  "fantasia.balance.elemental_affinities.type.desc": "Rebalance Type",
+  "fantasia.balance.elemental_affinities.type.values.0.name": "Default",
+  "fantasia.balance.elemental_affinities.type.values.0.desc": "Equivalent with disabling the patch. If no other mods affect elemental affinity calculations, behaves like Favorable.",
+  "fantasia.balance.elemental_affinities.type.values.1.name": "Favorable",
+  "fantasia.balance.elemental_affinities.type.values.1.desc": "Vanilla behavior. When resolving multi-elemental strikes, favors the player. Can stack weaknesses.",
+  "fantasia.balance.elemental_affinities.type.values.2.name": "Balance",
+  "fantasia.balance.elemental_affinities.type.values.2.desc": "Default option. When resolving N-elemental strikes, treats each 1/Nth of the damage as a separate element.",
+  "fantasia.balance.elemental_affinities.type.values.3.name": "Unfavorable",
+  "fantasia.balance.elemental_affinities.type.values.3.desc": "When resolving multi-elemental strikes, favors the enemy. Can stack resistances.",
+  "fantasia.balance.elemental_affinities.type.values.4.name": "Extra Mean",
+  "fantasia.balance.elemental_affinities.type.values.4.desc": "When resolving multi-elemental strikes, favors the enemy. Can stack resistances. If absorbing, can stack weaknesses instead."
+}
